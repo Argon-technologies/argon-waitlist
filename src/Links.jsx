@@ -29,7 +29,7 @@ function Links() {
         </div>
         <div className="mt-8 mr-[200px]">
           <h1 className="text-2xl font-bold text-white mb-4">Company</h1>
-          <a href="#">
+          <a href="/coming-soon">
             <p className="text-xl text-white mb-4">About Us</p>
             <p className="text-xl text-white">FAQs</p>
           </a>

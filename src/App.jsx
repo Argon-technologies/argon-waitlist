@@ -1,21 +1,15 @@
 import React from 'react'
-import Copy from './Copy'
-import Home from './Home'
-import Links from './Links'
-import List from './List'
-import Navbar from './Navbar'
-import Why from './Why'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Routing from './Routing'
+import ComingSoon from './ComingSoon'
 function App() {
   return (
-    <>
-    <Navbar />
-    <Home />
-    <Why />
-    <List />
-    <Links />
-    <Copy />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Routing />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+      </Routes>
+    </Router>
   )
 }
 
