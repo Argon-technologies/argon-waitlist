@@ -1,23 +1,45 @@
-import React from 'react'
-import { useState } from 'react'
-import curved from './assets/argon.png'
+import React, { useState } from 'react';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import logo from './assets/argon.png';
+import './App.css';
 
-function Navbar() {
+const Navbar = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
-    <div className="flex justify-between">
-      <div className='mt-3 ml-16'>
-        <img src={curved} />
+    <div className="gpt3__navbar">
+      <div className="gpt3__navbar-links">
+        <div className="gpt3__navbar-links_logo">
+          <img src={logo} />
+        </div>
+        <div className="gpt3__navbar-links_container">
+          <p><a href="/coming-soon">Product</a></p>
+          <p><a href="/coming-soon">About Us</a></p>
+          <p><a href="/coming-soon">FAQs</a></p>
+        </div>
       </div>
-      <div className="flex mt-8">
-        <li className="list-none mr-10 text-gray-500"><a href="/coming-soon">Products</a></li>
-        <li className='list-none mr-10 text-gray-500'><a href="/coming-soon">About Us</a></li>
-        <li className='list-none text-gray-500'><a href="/coming-soon">FAQs</a></li>
+      <div className="gpt3__navbar-sign">
+        <a href="#join"><button type="button">Join Waitlist</button></a>
       </div>
-      <div className="mt-6 mr-[150px]">
-        <a href="#join"><button className="border border-2 px-5 py-3 rounded-lg border-white bg-[#05acee] text-white">Join Waitlist</button></a>
+      <div className="gpt3__navbar-menu">
+        {toggleMenu
+          ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
+          : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
+        {toggleMenu && (
+        <div className="gpt3__navbar-menu_container scale-up-center">
+          <div className="gpt3__navbar-menu_container-links">
+            <p><a href="/coming-soon">Product</a></p>
+            <p><a href="/coming-soon">About Us</a></p>
+            <p><a href="/coming-soon">FAQs</a></p>
+          </div>
+          <div className="gpt3__navbar-menu_container-links-sign">
+            <button type="button">Join Waitlist</button>
+          </div>
+        </div>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

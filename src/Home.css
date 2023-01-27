@@ -1,0 +1,13 @@
+@media screen and (max-width: 550px) {
+    .home-top{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-text{
+        font-size: 2rem;
+        margin-left: 15px;
+    }
+    .header-p{
+        margin-left: 15px;
+    }
+}
