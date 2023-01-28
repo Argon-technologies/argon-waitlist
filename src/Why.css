@@ -1,0 +1,9 @@
+@media screen and (max-width: 550px) {
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .felin{
+        margin-left: 5rem;
+    }
+}

@@ -4,6 +4,7 @@ import trop from './assets/trop.svg'
 import file from './assets/file.svg'
 import secure from './assets/secure.svg'
 import globe from './assets/globe.svg'
+import './Why.css'
 
 function Why() {
   return (
@@ -21,7 +22,7 @@ function Why() {
                 <p className="text-lg text-gray-800">Grow your audience easily with our<br/> powerful AI platform that connects<br/> you to other AI creators.</p>
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex felin">
                 <img src={file} height={60} width={60} className="mr-20" />
                 <div className="mt-10">
                 <h1 className="text-3xl text-gray-800 font-bold">Share art galleries</h1>
@@ -37,7 +38,7 @@ function Why() {
                 <p className="text-lg text-gray-800">Share your AI generate content with our<br/> powerful AI platform that connects<br/> you to other AI creators.</p>
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex felin">
                 <img src={globe} height={60} width={60} className="mr-20" />
                 <div className="mt-10">
                 <h1 className="text-3xl text-gray-800 font-bold">Social media integration</h1>
